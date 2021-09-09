@@ -1,5 +1,11 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, Linking, Alert } from 'react-native';
+import {
+	SafeAreaView,
+	ScrollView,
+	Linking,
+	Alert,
+	StatusBar,
+} from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
 import colors from '../constants/colors';
@@ -13,6 +19,8 @@ const openLink = (url) =>
 export default () => {
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
+			<StatusBar barStyle="dark-content" backgroundColor={colors.white} />
+
 			<ScrollView>
 				<RowItem
 					title="Themes"
@@ -39,6 +47,12 @@ export default () => {
 				<RowItem
 					title="React Native by Example"
 					onPress={() => openLink('https://reactnativebyexample.com')}
+					rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
+				/>
+
+				<RowItem
+					title="Rayna Mecham's Portfolio"
+					onPress={() => openLink('https://raynamecham.com')}
 					rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
 				/>
 			</ScrollView>
