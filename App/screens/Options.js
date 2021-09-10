@@ -33,27 +33,11 @@ export default () => {
 				<RowSeparator />
 
 				<RowItem
-					title="React Native Basics"
-					onPress={() =>
-						openLink(
-							'https://learn.reactnativeschool.com/p/react-native-basics-build-a-currency-converter'
-						)
-					}
-					rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
-				/>
-
-				<RowSeparator />
-
-				<RowItem
-					title="React Native by Example"
-					onPress={() => openLink('https://reactnativebyexample.com')}
-					rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
-				/>
-
-				<RowItem
 					title="Rayna Mecham's Portfolio"
 					onPress={() => openLink('https://raynamecham.com')}
-					rightIcon={<Entypo name="export" size={20} color={colors.blue} />}
+					rightIcon={
+						<Entypo name="chevron-right" size={20} color={colors.blue} />
+					}
 				/>
 			</ScrollView>
 		</SafeAreaView>
